@@ -66,92 +66,92 @@
 + (SecKeyWrapper *)sharedWrapper;
 
 /**
- *  @abstract
+ *  @abstract 生成公私鈅对
  */
 - (void)generateKeyPair:(NSUInteger)keySize;
 
 /**
- *  @abstract
+ *  @abstract 删除非对称加密的键
  */
 - (void)deleteAsymmetricKeys;
 
 /**
- *  @abstract
+ *  @abstract 删除对称加密的键
  */
 - (void)deleteSymmetricKey;
 
 /**
- *  @abstract
+ *  @abstract 生成对称加密的键
  */
 - (void)generateSymmetricKey;
 
 /**
- *  @abstract
+ *  @abstract 添加公钥（在keychain中）
  */
 - (SecKeyRef)addPeerPublicKey:(NSString *)peerName keyBits:(NSData *)publicKey;
 
 /**
- *  @abstract
+ *  @abstract 移除公钥（在keychain中）
  */
 - (void)removePeerPublicKey:(NSString *)peerName;
 
 /**
- *  @abstract
+ *  @abstract 得到对称加密的值
  */
 - (NSData *)getSymmetricKeyBytes;
 
 /**
- *  @abstract
+ *  @abstract 包装对称加密的值，使用公钥
  */
 - (NSData *)wrapSymmetricKey:(NSData *)symmetricKey keyRef:(SecKeyRef)publicKey;
 
 /**
- *  @abstract
+ *  @abstract 解除包装对称加密的值
  */
 - (NSData *)unwrapSymmetricKey:(NSData *)wrappedSymmetricKey;
 
 /**
- *  @abstract
+ *  @abstract 对plainText进行加密
  */
 - (NSData *)getSignatureBytes:(NSData *)plainText;
 
 /**
- *  @abstract
+ *  @abstract 对plainText进行哈希
  */
 - (NSData *)getHashBytes:(NSData *)plainText;
 
 /**
- *  @abstract
+ *  @abstract 使用公钥进行验证
  */
 - (BOOL)verifySignature:(NSData *)plainText secKeyRef:(SecKeyRef)publicKey signature:(NSData *)sig;
 
 /**
- *  @abstract
+ *  @abstract 对plainText进行加密
  */
 - (NSData *)doCipher:(NSData *)plainText key:(NSData *)symmetricKey context:(CCOperation)encryptOrDecrypt padding:(CCOptions *)pkcs7;
 
 /**
- *  @abstract
+ *  @abstract 得到公钥
  */
 - (SecKeyRef)getPublicKeyRef;
 
 /**
- *  @abstract
+ *  @abstract 得到公钥的比特流
  */
 - (NSData *)getPublicKeyBits;
 
 /**
- *  @abstract
+ *  @abstract 得到私钥
  */
 - (SecKeyRef)getPrivateKeyRef;
 
 /**
- *  @abstract
+ *  @abstract 使用keyRef得到持久化存储的键
  */
 - (CFTypeRef)getPersistentKeyRefWithKeyRef:(SecKeyRef)keyRef;
 
 /**
- *  @abstract
+ *  @abstract 根据持久化的键得到keyRef
  */
 - (SecKeyRef)getKeyRefWithPersistentKeyRef:(CFTypeRef)persistentRef;
 
