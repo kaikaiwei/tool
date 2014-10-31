@@ -16,6 +16,7 @@
 		F8F2B60B1A031CD100E750B7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8F2B60A1A031CD100E750B7 /* Images.xcassets */; };
 		F8F2B60E1A031CD100E750B7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F8F2B60C1A031CD100E750B7 /* LaunchScreen.xib */; };
 		F8F2B61A1A031CD100E750B7 /* ttTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F8F2B6191A031CD100E750B7 /* ttTests.m */; };
+		F8F2B67D1A031D4200E750B7 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8F2B67C1A031D4200E750B7 /* CoreData.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,34 @@
 			proxyType = 1;
 			remoteGlobalIDString = F8F2B5F31A031CD100E750B7;
 			remoteInfo = tt;
+		};
+		F8F2B64B1A031CFE00E750B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F2B6461A031CFD00E750B7 /* coredata.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F2B62C1A031CFD00E750B7;
+			remoteInfo = coredata;
+		};
+		F8F2B64D1A031CFE00E750B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F2B6461A031CFD00E750B7 /* coredata.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F2B6371A031CFD00E750B7;
+			remoteInfo = coredataTests;
+		};
+		F8F2B6771A031D2500E750B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F2B6721A031D2400E750B7 /* crypo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F2B6581A031D2400E750B7;
+			remoteInfo = crypo;
+		};
+		F8F2B6791A031D2500E750B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F8F2B6721A031D2400E750B7 /* crypo.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8F2B6631A031D2400E750B7;
+			remoteInfo = crypoTests;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,6 +74,9 @@
 		F8F2B6131A031CD100E750B7 /* ttTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ttTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F2B6181A031CD100E750B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8F2B6191A031CD100E750B7 /* ttTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ttTests.m; sourceTree = "<group>"; };
+		F8F2B6461A031CFD00E750B7 /* coredata.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = coredata.xcodeproj; path = coredata/coredata/coredata.xcodeproj; sourceTree = "<group>"; };
+		F8F2B6721A031D2400E750B7 /* crypo.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crypo.xcodeproj; path = crypo/crypo/crypo.xcodeproj; sourceTree = "<group>"; };
+		F8F2B67C1A031D4200E750B7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F8F2B67D1A031D4200E750B7 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,8 +101,11 @@
 		F8F2B5EB1A031CD100E750B7 = {
 			isa = PBXGroup;
 			children = (
+				F8F2B6721A031D2400E750B7 /* crypo.xcodeproj */,
+				F8F2B6461A031CFD00E750B7 /* coredata.xcodeproj */,
 				F8F2B5F61A031CD100E750B7 /* tt */,
 				F8F2B6161A031CD100E750B7 /* ttTests */,
+				F8F2B67B1A031D3000E750B7 /* Frameworks */,
 				F8F2B5F51A031CD100E750B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -125,6 +161,32 @@
 				F8F2B6181A031CD100E750B7 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F8F2B6471A031CFD00E750B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8F2B64C1A031CFE00E750B7 /* libcoredata.a */,
+				F8F2B64E1A031CFE00E750B7 /* coredataTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8F2B6731A031D2400E750B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8F2B6781A031D2500E750B7 /* libcrypo.a */,
+				F8F2B67A1A031D2500E750B7 /* crypoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F8F2B67B1A031D3000E750B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8F2B67C1A031D4200E750B7 /* CoreData.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +256,16 @@
 			mainGroup = F8F2B5EB1A031CD100E750B7;
 			productRefGroup = F8F2B5F51A031CD100E750B7 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F8F2B6471A031CFD00E750B7 /* Products */;
+					ProjectRef = F8F2B6461A031CFD00E750B7 /* coredata.xcodeproj */;
+				},
+				{
+					ProductGroup = F8F2B6731A031D2400E750B7 /* Products */;
+					ProjectRef = F8F2B6721A031D2400E750B7 /* crypo.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F8F2B5F31A031CD100E750B7 /* tt */,
@@ -201,6 +273,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F8F2B64C1A031CFE00E750B7 /* libcoredata.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcoredata.a;
+			remoteRef = F8F2B64B1A031CFE00E750B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8F2B64E1A031CFE00E750B7 /* coredataTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = coredataTests.xctest;
+			remoteRef = F8F2B64D1A031CFE00E750B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8F2B6781A031D2500E750B7 /* libcrypo.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libcrypo.a;
+			remoteRef = F8F2B6771A031D2500E750B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F8F2B67A1A031D2500E750B7 /* crypoTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = crypoTests.xctest;
+			remoteRef = F8F2B6791A031D2500E750B7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F8F2B5F21A031CD100E750B7 /* Resources */ = {
